@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:paddingTop="15dp"
+    android:paddingLeft="5dp"
+    android:paddingBottom="15dp"
+    android:paddingRight="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/transluscentPrimary"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transluscentPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                app:cardBackgroundColor="@color/colorSecondary"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/colorPrimaryDark"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/displayNewProp_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/add_image"
+                        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <ScrollView
+                android:id="@+id/scrollViewAddProp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="98"
+                android:fadingEdgeLength="25dp"
+                android:requiresFadingEdge="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addDescription_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginBottom="25dp"
+                        android:background="@drawable/custom_login_reg_et"
+                        android:gravity="top"
+                        android:hint="Insert Property Description"
+                        android:padding="20dp"
+                        android:textColor="#919191"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/addAddressLine1_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="25dp"
+                        android:background="@drawable/custom_login_reg_et"
+                        android:hint="Address Line 1"
+                        android:inputType="textPostalAddress|textCapWords"
+                        android:padding="20dp"
+                        android:textColor="#919191"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/addAddressLine2_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="25dp"
+                        android:background="@drawable/custom_login_reg_et"
+                        android:hint="Address Line 2"
+                        android:inputType="textPostalAddress|textCapWords"
+                        android:padding="20dp"
+                        android:textColor="#919191"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="25dp"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <EditText
+                            android:id="@+id/addCity_edt"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:layout_weight="50"
+                            android:background="@drawable/custom_login_reg_et"
+                            android:hint="City"
+                            android:inputType="textPostalAddress|textCapWords"
+                            android:padding="20dp"
+                            android:textColor="#919191"
+                            android:textSize="12dp" />
+
+                        <EditText
+                            android:id="@+id/addPostCode_edt"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="50"
+                            android:background="@drawable/custom_login_reg_et"
+                            android:hint="Postcode"
+                            android:inputType="textPostalAddress|textCapWords"
+                            android:padding="20dp"
+                            android:textColor="#919191"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="25dp"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <EditText
+                            android:id="@+id/addPrice_edt"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:layout_weight="50"
+                            android:background="@drawable/custom_login_reg_et"
+                            android:hint="Price"
+                            android:inputType="textPostalAddress|textCapWords"
+                            android:padding="20dp"
+                            android:textColor="#919191"
+                            android:textSize="12dp" />
+
+                        <RadioGroup
+                            android:id="@+id/paySchedule_rGrp"
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="50"
+                            android:background="@drawable/radio_group_bg"
+                            android:checkedButton="@+id/monthly_rbtn"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/monthly_rbtn"
+                                style="@style/Widget.AppCompat.ActionButton.Overflow"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_btn_bg"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="P/M"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="12dp" />
+
+                            <RadioButton
+                                android:id="@+id/weekly_rbtn"
+                                android:layout_width="4dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_btn_bg"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="P/W"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="12dp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="25dp"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <RadioGroup
+                            android:id="@+id/addBills_rGrp"
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="12dp"
+                            android:layout_weight="50"
+                            android:background="@drawable/radio_group_bg"
+                            android:checkedButton="@+id/excludingBills_rbtn"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/excludingBills_rbtn"
+                                style="@style/Widget.AppCompat.ActionButton.Overflow"
+                                android:layout_width="4dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_btn_bg"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="-Bills"
+                                android:textAllCaps="true"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:id="@+id/includingBills_rbtn"
+                                android:layout_width="4dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_btn_bg"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="+Bills"
+                                android:textAllCaps="true"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <RadioGroup
+                            android:id="@+id/addFurniture_rGrp"
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="50"
+                            android:background="@drawable/radio_group_bg"
+                            android:checkedButton="@+id/unfurnished_rbtn"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/unfurnished_rbtn"
+                                style="@style/Widget.AppCompat.ActionButton.Overflow"
+                                android:layout_width="4dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_btn_bg"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="14dp"
+                                android:text="-Furniture"
+                                android:textAllCaps="true"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:id="@+id/furnished_rbtn"
+                                android:layout_width="4dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_btn_bg"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="+Furniture"
+                                android:textAllCaps="true"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/saveNewProperty_Btn"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_btn"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/textBtn"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
